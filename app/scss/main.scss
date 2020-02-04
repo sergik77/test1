@@ -1,0 +1,224 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+    color: #666;
+}
+
+/*::selection {
+    background-color: $accent;
+    color: #fff;
+}*/
+
+body {
+    font-size: 14px;
+    min-width: 320px;
+    font-family: $default-font;
+    color: $text;
+    background-color: #fafafa;
+    input, textarea {
+        border: #f5f5f5 2px solid;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        outline: none;
+        height: 50px;
+        padding: 0 20px;
+        margin-left: 44px;
+        width: 226px;
+        &:focus:required:invalid {
+            border-color: red;
+        }
+        &:required:valid {
+            border-color: green;
+        }
+    }
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    &.img-width {
+        width: 100%;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+b, strong {
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $text-medium;
+}
+nav {
+    padding: 30px 0 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.08);
+}
+.container {
+    margin: 0 auto;
+    max-width:  1110px;
+    display: flex;
+}
+.logo {
+    padding: 20px 24px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(77, 77, 77);
+    line-height: 1.364;
+    text-align: left;
+}
+
+.dropbtn {
+    background-color: #fff;
+    color: $text;
+    padding: 19px;
+    border: none;
+    cursor: pointer;
+    /*height: 50px;*/
+    line-height: 1;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    border-left: #f5f5f5 2px solid;
+    border-right:  #f5f5f5 2px solid;
+    font-size: 14px;
+    line-height: 1;
+    &__usd {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        border: none;
+    }
+    &__help {
+        display: inline-block;
+        border-left: #f5f5f5 2px solid;
+        border-right:  #f5f5f5 2px solid;
+        height: 60px;
+    }
+    &__lang {
+        display: inline-block;
+        border-left: #f5f5f5 2px solid;
+        border-right:  #f5f5f5 2px solid;
+        height: 60px;
+    }
+}
+.dropbtn__img {
+    margin: 0 10px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.submit {
+    margin-left: -5px;
+    background-color: #fff;
+    border: 2px solid #f5f5f5;
+    border-left: none;
+    padding: 15px 19px 16px;
+    line-height: 1;
+    margin-right: 65px;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #fff;
+}
+.item {
+    display: flex;
+    &__cart {
+        position: relative;
+        display: flex;
+        &:before {
+            content: '';
+            position: absolute;
+            background: $accent;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            left: 20px;
+            top: -5px;
+        }
+        a {
+            text-decoration: none;
+            color: $text-medium;
+            margin: 0 15px;
+        }
+    }
+    &__wish {
+        display: flex;
+    }
+    a {
+        text-decoration: none;
+        color: $text-medium;
+        margin: 0 15px;
+    }
+    &__user {
+        display: flex;
+    }
+    a {
+        text-decoration: none;
+        color: $text-medium;
+        margin: 0 15px;
+    }
+
+}
+.icon {
+    border-radius: 50%;
+    background-color: rgb(128, 128, 128);
+    position: absolute;
+}
+.border {
+    border-top: 2px solid #f5f5f5;
+    border-bottom:  2px solid #f5f5f5;
+}
+.menu {
+    margin: 0 auto;
+    max-width: 1110px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    ul{
+        display: flex;
+        li {
+            margin: 0 20px;
+        }
+    }
+}
+.help {
+
+}
+
+@import "media"; // Always at the end
